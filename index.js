@@ -151,11 +151,11 @@ function imageAnimation(img, mode) {
   const keyframes = [
     {
       transform: `translateX(${firstValue})`,
-      opacity: 0,
+      opacity: mode == "both" ? 0 : 1,
     },
     {
       transform: `translateX(${secondValue})`,
-      opacity: 1,
+      opacity: mode == "both" ? 1 : 0,
     },
   ];
   const properties = {

@@ -1,6 +1,9 @@
 const projectImageList = document.querySelectorAll("#section3 .content img");
 const imageDialog = document.querySelector("dialog");
 const closeIcon = document.querySelector("#closeIcon");
+const currentlyFocusedImage = imageDialog.querySelector(
+  "#currentlyFocusedImage",
+);
 projectImageList.forEach((image) => {
   image.addEventListener("click", () => {
     // Checking width of window
@@ -26,4 +29,12 @@ projectImageList.forEach((image) => {
 closeIcon.addEventListener("click", () => {
   console.log(imageDialog);
   imageDialog.close();
+});
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 570) {
+    imageDialog.close();
+  }
+});
+currentlyFocusedImage.addEventListener("click", (e) => {
+  window.open(`${currentlyFocusedImage.src}`);
 });
