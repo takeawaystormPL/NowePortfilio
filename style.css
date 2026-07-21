@@ -132,6 +132,7 @@ header img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-y: hidden;
 }
 /* Properties of text on section 1 background */
 #text {
@@ -150,7 +151,7 @@ header img {
 #section1 img {
   position: absolute;
   left: 63%;
-  top: 25%;
+  top: 20%;
 }
 
 /* SECTION 2 PROPERTIES */

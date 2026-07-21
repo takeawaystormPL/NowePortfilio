@@ -33,8 +33,7 @@ window.addEventListener("load", () => {
   loadElements();
 });
 function loadElements() {
-  console.log(isDone);
-  if (window.scrollY <= 0) {
+  if (window.scrollY <= header.height + section1Position.height - 120) {
     currentDiv = 0;
     if (!isDone[currentDiv]) {
       isDone[currentDiv] = true;
