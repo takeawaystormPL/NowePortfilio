@@ -1,0 +1,579 @@
+/* Common page properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+main,
+section {
+  margin-top: 1em;
+  overflow-x: hidden;
+}
+#section2 h1,
+#section3 h1,
+#section4 h1,
+#section5 h1 {
+  text-align: center;
+}
+#section2 h1 img,
+#section3 h1 img,
+#section4 h1 img,
+#section5 h1 img {
+  width: 70px;
+  height: 45px;
+  vertical-align: middle;
+}
+#section2 .border,
+#section3 .border,
+#section4 .border {
+  width: 50%;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #4735f9;
+  border-radius: 16px;
+}
+
+dialog {
+  background: whitesmoke;
+  width: 1000px;
+  height: 600px;
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  padding: 2em;
+  overflow: hidden;
+  border: 4px solid #4735f9;
+  border-radius: 5px;
+  outline: none;
+}
+dialog div {
+  position: relative;
+}
+dialog #currentlyFocusedImage {
+  display: block;
+  width: 900px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+dialog #closeIcon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 99%;
+  top: -5%;
+}
+/* HEADER PROPERTIES */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  padding: 0.5em;
+  padding-top: 0;
+  z-index: 5;
+}
+header #headerContainer {
+  padding-top: 1em;
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Header links properties */
+header #links div {
+  display: inline-block;
+  overflow: hidden;
+}
+header #links a {
+  margin-left: 1em;
+  text-decoration: none;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  transition: color 0.6s ease;
+  font-weight: 500;
+}
+header #links a:hover {
+  color: blue;
+}
+header #links .linkBorder {
+  overflow: visible;
+  animation: linkDefaultAnimation 0s ease forwards 1;
+  height: 3px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #4735f9;
+}
+header #links div:hover .linkBorder {
+  animation: linkShowAnimation 0.5s ease both 1;
+}
+header img {
+  margin-left: 1.5em;
+  width: 115px;
+  height: 75px;
+}
+
+/* PROPERTIES OF SECTION 1 */
+#section1 {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("./resources/tlo_strony.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* Properties of text on section 1 background */
+#text {
+  width: 40%;
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  color: white;
+}
+#text p {
+  margin-top: 1.3em;
+  font-size: 1rem;
+}
+/* My image properties */
+#section1 img {
+  position: absolute;
+  left: 63%;
+  top: 25%;
+}
+
+/* SECTION 2 PROPERTIES */
+#section2 {
+  min-height: 100vh;
+  margin-top: 6em;
+}
+/* Properties of text about me */
+#section2 .content {
+  overflow: hidden;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#section2 .content .text {
+  width: 49%;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+#section2 .content p {
+  margin-top: 1.2em;
+  font-size: 0.9rem;
+}
+/* Properties of image  */
+#section2 .content img {
+  width: 550px;
+  height: 275px;
+}
+
+/* SECTION 3 PROPERTIES */
+#section3 .content {
+  margin-top: 3em;
+  overflow: hidden;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#section3 .projectPhotosContainer {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  min-height: 50vh;
+  overflow: hidden;
+  display: flex;
+  gap: 1em;
+}
+#section3 .projectPhotosContainer img {
+  width: 450px;
+  height: 250px;
+  opacity: 1;
+  position: absolute;
+  left: 120%;
+}
+#section3 .projectPhotosContainer img:first-of-type {
+  left: 20%;
+}
+
+/* SECTION 4 PROPERTIES */
+#section4 {
+  min-height: 90vh;
+}
+#section4 .content {
+  margin-top: 1em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+#section4 .content img {
+  width: 500px;
+}
+#section4 .content .text {
+  font-size: 0.9rem;
+  max-width: 70ch;
+}
+/* SECTION 5 PROPERTIES */
+#section5 {
+  min-height: 85vh;
+  overflow: visible;
+}
+#section5 .content {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#section5 .content .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 300px;
+  height: 200px;
+  box-shadow: 4px 4px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+#section5 .content .contact img#facebookIcon {
+  width: 100px;
+  height: 100px;
+}
+#section5 .content .contact img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#section5 .content .contact h3,
+#section5 .content .contact h4 {
+  margin-top: 0.3em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+#section5 .content .contact:hover {
+  background: whitesmoke;
+  transform: translateY(-10px);
+}
+/* FOOTER PROPERTIES */
+footer {
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+  background: #005bf0;
+  padding: 1em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+/* LINK ANIMATIONS */
+@keyframes linkDefaultAnimation {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+@keyframes linkShowAnimation {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1400px) {
+  dialog {
+    left: 15%;
+  }
+  /* Section 1 responsiveness */
+  #section1 img {
+    width: 400px;
+    top: 28%;
+  }
+  #section1 #text p {
+    font-size: 0.9rem;
+  }
+  #section3 .projectPhotosContainer {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1180px) {
+  dialog {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  /* Dialog responsiveness */
+  dialog {
+    width: 900px;
+    height: 525px;
+    left: 5%;
+  }
+  dialog img#currentlyFocusedImage {
+    width: 800px;
+    height: 475px;
+  }
+  #section1 #text p,
+  #section2 .content p,
+  #section4 .content .text p {
+    font-size: 0.8rem;
+  }
+  /* Section 1 responsiveness */
+  #section1 img {
+    width: 300px;
+    top: 37%;
+  }
+
+  /* Section 2 responsiveness */
+  #section2 .content img {
+    width: 450px;
+    height: 225px;
+  }
+
+  /* Section 3 responsiveness  */
+  #section3 .projectPhotosContainer {
+    width: 70%;
+  }
+
+  /* Section 4 responsiveness */
+  #section4 .content .text p {
+    max-width: 65ch;
+  }
+
+  /* Section 5 responsiveness */
+  #section5 .content .contact img {
+    width: 50px;
+    height: 50px;
+  }
+  #section5 .content .contact h3 {
+    font-size: 1rem;
+  }
+  #section5 .content .contact h4 {
+    font-size: 0.9rem;
+  }
+  #section5 .content .contact img#facebookIcon {
+    width: 70px;
+    height: 70px;
+  }
+  #section5 .content .contact {
+    width: 300px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  /* Dialog responsiveness */
+  dialog {
+    width: 700px;
+    height: 350px;
+    left: 10%;
+    top: 35%;
+  }
+  dialog img#currentlyFocusedImage {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #section3 .projectPhotosContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  #section1 #text p,
+  #section2 .content p,
+  #section4 .content .text p {
+    font-size: 0.6rem;
+  }
+  /* Header responsiveness */
+  header #links a {
+    font-size: 0.8rem;
+  }
+  #headerContainer {
+    flex-direction: column;
+  }
+  #headerContainer #links {
+    margin-top: 1em;
+  }
+
+  /* Dialog responsiveness */
+  dialog {
+    width: 500px;
+    height: 300px;
+    left: 10%;
+    top: 35%;
+  }
+  dialog img#currentlyFocusedImage {
+    width: 400px;
+    height: 250px;
+  }
+
+  /*Section 1 responsiveness  */
+  #section1 h1 {
+    font-size: 1.5rem;
+  }
+  #section1 img {
+    width: 200px;
+    top: 38%;
+  }
+
+  /* Section 3 responsiveness */
+  #section3 .projectPhotosContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #section3 .projectPhotosContainer img {
+    width: 350px;
+    height: 175px;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  #section1 #text p,
+  #section2 .content p,
+  #section4 .content .text p {
+    font-size: 0.5rem;
+  }
+
+  #section2,
+  #section3,
+  #section4 {
+    min-height: 75vh;
+  }
+
+  /* Section 1 responsiveness */
+  #section1 h1 {
+    font-size: 1.3rem;
+  }
+  #section1 img {
+    width: 150px;
+    top: 47%;
+  }
+
+  /* Section 2 responsiveness */
+  #section2 .content img {
+    width: 250px;
+    height: 125px;
+  }
+
+  /* Section 3 responsiveness */
+  #section3 .projectPhotosContainer img {
+    width: 300px;
+    height: 150px;
+  }
+  #section3 .projectPhotosContainer img:first-of-type {
+    left: 10%;
+  }
+
+  /* Section 4 responsiveness */
+  #section4 .content img {
+    width: 300px;
+  }
+
+  /* Section 5 responsiveness */
+  #section5 .content .contact h3 {
+    font-size: 0.9rem;
+  }
+  #section5 .content .contact h4 {
+    font-size: 0.7rem;
+  }
+  #section5 .content .contact img {
+    width: 40px;
+    height: 40px;
+  }
+  #section5 .content .contact img#facebookIcon {
+    width: 50px;
+    height: 50px;
+  }
+  #section5 .content .contact {
+    width: 210px;
+    height: 125px;
+  }
+
+  /* Footer responsiveness */
+  footer {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  /* Header responsiveness */
+  header #links a {
+    font-size: 0.7rem;
+  }
+  header {
+    position: static;
+  }
+
+  /* Section 1 responsiveness */
+  #section1 {
+    background: url("./resources/tlo_strony_telefon.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #section1 h1 {
+    font-size: 1.2rem;
+  }
+  #text {
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    width: 50%;
+  }
+  #section1 img {
+    top: 60%;
+    left: 33%;
+  }
+
+  /* Section 3 responsiveness */
+  #section3 .projectPhotosContainer img {
+    width: 275px;
+    height: 150px;
+  }
+  #section3 .projectPhotosContainer img:first-of-type {
+    left: 0%;
+  }
+}
